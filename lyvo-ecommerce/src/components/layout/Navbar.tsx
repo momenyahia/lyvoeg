@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useStore } from '@/lib/store';
 import {
@@ -43,11 +44,16 @@ export default function Navbar() {
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
 
-        {/* Brand Logo: Bold All-Caps LYVO in Dark Red */}
+        {/* Official Brand Logo */}
         <Link href="/" className="flex items-center space-x-1 shrink-0">
-          <span className="text-3xl sm:text-4xl font-black tracking-tight text-[#8B1E22] font-sans">
-            LYVO
-          </span>
+          <Image
+            src="/lyvo-logo.png"
+            alt="LYVO"
+            width={125}
+            height={42}
+            className="h-8 sm:h-9 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Search Bar with Pill Shape */}

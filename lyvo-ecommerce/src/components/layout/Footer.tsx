@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Globe, 
   ChevronDown 
@@ -18,9 +19,13 @@ export default function Footer() {
           {/* Column 1: Brand & Tagline */}
           <div className="col-span-2 md:col-span-1 space-y-2">
             <Link href="/" className="inline-block">
-              <span className="text-3xl font-black text-[#8B1E22] tracking-tight font-sans">
-                LYVO
-              </span>
+              <Image
+                src="/lyvo-logo.png"
+                alt="LYVO"
+                width={120}
+                height={40}
+                className="h-8 w-auto object-contain"
+              />
             </Link>
             <p className="text-xs text-stone-500 font-medium">
               Better Choices. Brighter Days.
